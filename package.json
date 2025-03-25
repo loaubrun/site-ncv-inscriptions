@@ -1,7 +1,7 @@
 {
   "name": "site-ncv-inscriptions",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./back/index.js",
   "scripts": {
     "start": "node ./back/index.js",
     "dev:back": "node --watch ./back/index.js",
