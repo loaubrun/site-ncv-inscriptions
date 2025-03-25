@@ -1,0 +1,20 @@
+{
+  "name": "site-ncv-inscriptions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./back/index.js",
+    "dev:back": "node --watch ./back/index.js",
+    "build":"cd ./front && npm run build",
+    "dev:front": "cd ./front && npm run dev",
+    "lint": "eslint ./front"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}
