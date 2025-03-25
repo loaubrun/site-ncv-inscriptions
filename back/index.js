@@ -2,12 +2,12 @@ const express = require('express');
 const mysql = require('mysql2');
 const app = express();
 
-app.use(express.static(__dirname+'/dist'));
+app.use(express.static(path.join(__dirname,'dist')));
 app.use(express.json());
 
 
 app.get('/', (request, response) => {
-  response.sendFile(__dirname+'/dist/index.html')
+  response.sendFile(path.join(__dirname,'dist','index.html'));
 });
 
 const PORT = 3001
@@ -28,6 +28,8 @@ db.connect((err) => {
   }
   console.log('Connected to MySQL database');
 });
+
+// Create a new user
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
